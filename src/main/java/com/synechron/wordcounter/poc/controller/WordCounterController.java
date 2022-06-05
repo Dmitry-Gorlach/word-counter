@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @AllArgsConstructor
-@RequestMapping(value = "/api/word-counter", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class WordCounterController {
 
     private final WordCounterService wordCounterService;
 
-    //@PreAuthorize("hasAuthority('MODIFY')") //Authorization could be here
+    //@PreAuthorize("hasAuthority('MODIFY')") // ** Authorization could be here
     @ResponseStatus(HttpStatus.OK)
     @PostMapping("/add")
     @ApiOperation(
@@ -34,6 +34,7 @@ public class WordCounterController {
                     @ApiResponse(code = 404, message = "The resource you were trying to reach is not found"),
                     @ApiResponse(code = 500, message = "Internal error")
             })
+//    *** just an example for authorization ***
 //    @ApiImplicitParams({
 //            @ApiImplicitParam(name = "Authorization", value = "Bearer <access_token>",
 //                    required = true, dataTypeClass = String.class, paramType = "header") })
@@ -46,6 +47,7 @@ public class WordCounterController {
      * @param word
      * @return number of words found
      */
+    //@PreAuthorize("hasAnyAuthority('VIEW', 'MODIFY')") // ** Authorization could be here
     @GetMapping(value = "/{word}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(
             value = "Retrieve specific word information.",
@@ -61,6 +63,7 @@ public class WordCounterController {
                     @ApiResponse(code = 404, message = "The resource you were trying to reach is not found"),
                     @ApiResponse(code = 500, message = "Internal error")
             })
+//    *** just an example for authorization ***
 //    @ApiImplicitParams({
 //            @ApiImplicitParam(name = "Authorization", value = "Bearer <access_token>",
 //                    required = true, dataTypeClass = String.class, paramType = "header") })

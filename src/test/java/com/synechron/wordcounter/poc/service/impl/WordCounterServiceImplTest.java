@@ -40,7 +40,6 @@ class WordCounterServiceImplTest {
             wordCounterService.addWords("Hello my " + wrongWord);
         });
 
-//        String expectedMessage = "Words should not contain non-alphabet characters! Please try again.";
         String expectedMessage = String.format(
                 "Word %s not added as it contains non-alphabet characters! Please try again.", wrongWord);
         String actualMessage = exception.getMessage();

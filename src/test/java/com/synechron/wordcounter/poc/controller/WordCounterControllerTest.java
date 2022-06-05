@@ -22,10 +22,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(WordCounterController.class)
 @AutoConfigureMockMvc
-//@SpringBootTest
 class WordCounterControllerTest {
 
-    private static final String BASE_WORD_COUNTER_URI = "/api/word-counter";
+    private static final String BASE_WORD_COUNTER_URI = "/api";
 
     @MockBean
     WordCounterService wordCounterService;

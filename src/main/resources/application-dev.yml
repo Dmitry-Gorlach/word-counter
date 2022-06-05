@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
   servlet:
     context-path: /word-counter
 
@@ -21,7 +21,3 @@ swagger:
   contactEmail: harlachdzmitry@gmail.com
   license: License of API
   licenseUrl: \#
-
-spring:
-  profiles:
-    active: dev

@@ -15,6 +15,7 @@
     <description>word-counter</description>
     <properties>
         <java.version>11</java.version>
+        <spring.fox.version>3.0.0</spring.fox.version>
     </properties>
     <dependencies>
         <dependency>
@@ -50,7 +51,13 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
-            <version>3.0.0</version>
+            <version>${spring.fox.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 

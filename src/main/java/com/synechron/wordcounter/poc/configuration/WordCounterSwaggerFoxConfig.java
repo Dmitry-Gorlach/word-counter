@@ -40,7 +40,7 @@ public class WordCounterSwaggerFoxConfig {
     return new Docket(DocumentationType.SWAGGER_2)
         .useDefaultResponseMessages(false)
         .select()
-        .apis(RequestHandlerSelectors.basePackage("com.example.wordcounter"))
+        .apis(RequestHandlerSelectors.basePackage("com.synechron.wordcounter"))
         .paths(PathSelectors.any())
         .build()
         .apiInfo(apiInfo())
