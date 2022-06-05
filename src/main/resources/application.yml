@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /^project.artifactId^
+
+## Configuring actuator/info endpoint
+info:
+  app:
+    name: word-counter
+    description: Word Counter API
+    version: 0.0.1
+
+
+swagger:
+  title: word-counter
+  description: Word Counter API
+  version: 0.0.1
+  termsOfServiceUrl: \#
+  contactName: Dzmitry Harlach
+  contactUrl: \#
+  contactEmail: harlachdzmitry@gmail.com
+  license: License of API
+  licenseUrl: \#
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
